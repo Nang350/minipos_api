@@ -12,6 +12,9 @@ const productController = require("./controllers/productController");
 const billController = require("./controllers/billController");
 const transactionController = require("./controllers/transactionController");
 
+app.get("/", (req, res) => {
+  res.send("Hello welcom to api")
+})
 // user
 app.post("/api/user/create", (req, res) => UserController.create(req, res));
 app.get("/api/user/list", (req, res) => UserController.list(req, res));
